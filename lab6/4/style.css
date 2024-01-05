@@ -1,0 +1,64 @@
+.container {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    column-gap: 1rem;
+}
+.footer{
+    display: grid;
+    width: 100%;
+    text-align: center;
+    font-size: 2vw;
+    background-color: lightsteelblue;
+}
+
+.header {
+    display: grid;
+    width: 100%;
+    text-align: center;
+    font-size: 2vw;
+    background-color: lightsteelblue;
+}
+
+.header-bar {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: none;
+}
+button{
+    background-color: beige;
+}
+
+.menu {
+    display: grid;
+    width: 100%;
+}
+
+img {
+    width: 100%;
+    display: grid;
+}
+.pic{
+    display: none;
+}
+.card{
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 620px) {
+    .container {
+        display: grid;
+        grid-template-columns: 0fr 1fr 0fr;
+        column-gap: 1rem;
+    }
+    .header-bar {
+        display: grid;
+    }
+    .menu {
+        display: none;
+    }
+    .pic{
+        display: grid;
+    }
+
+}
