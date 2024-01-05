@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="createCard.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="info">
+            <form role="Form" id="Form">
+                <h1>Create your card</h1>
+                <label for="name">Fullname :</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your fullname">
+
+                <label for="phone">Phone :</label>
+                <input type="number" class="form-control" id="phone" placeholder="Enter your phone number">
+
+                <label for="email">E-mail :</label>
+                <input type="mail" class="form-control" id="email" placeholder="Enter your E-mail">
+
+                <label for="company">Company :</label>
+                <input type="text" class="form-control" id="company" placeholder="Enter your company">
+
+            </form>
+
+            <button onclick="validator()" class="button">Create</button>
+
+        </div>
+        <div class="left">
+            <h2>your card here</h2>
+
+            <div class="card" id="bg">
+                <h3 id="dataname"></h3>
+                <h4 id="dataphone"></h4>
+                <h4 id="dataemail"></h4>
+                <h4 id="datacompany"></h4>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

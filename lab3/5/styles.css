@@ -1,0 +1,89 @@
+body {
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.container {
+    position: relative;
+    display: flex;
+    width: 1000px;
+    padding: 10;
+    background-color: rgb(238, 238, 238);
+    margin-top: 10px;
+}
+
+.info {
+    background-color: #fff;
+    width: 400px;
+    margin: 20px;
+    padding: 50px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    box-shadow: 5px 5px #ccc;
+}
+
+.card {
+    background-image: url(https://cdn.discordapp.com/attachments/1012344674410823791/1012344750680068156/bgcard1.png);
+    margin: auto;
+    width: 500px;
+    height: 300px;
+    box-shadow: 5px 5px #ccc;
+    padding: 30;
+    padding-top: 50px;
+}
+
+.left {
+    margin: auto;
+
+}
+h2 {
+    text-align: center;
+    color: rgb(68, 107, 66);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: larger;
+    font-weight: 900;
+
+}
+
+form {
+    background-color: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+label {
+    font-weight: 1000;
+}
+
+button {
+    background-color: #ccc;
+}
+
+button:hover {
+    background-color: #999;
+    border-radius: 10px;
+}
+
+h3 {
+    color: #fff0df;
+    font-family: 'Satisfy', cursive;
+}
+
+h4 {
+    color: #fff0df;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.button {
+    background-color: rgb(130, 243, 130);
+    border: 0;
+    border-radius: 10px;
+    width: 100%;
+    padding: 5px;
+}
+.button:hover {
+    background-color: rgb(98, 162, 98);
+}
+/* h5 {
+    color: gray;
+    margin: auto;
+    font-family: 'Josefin Sans', sans-serif;
+} */

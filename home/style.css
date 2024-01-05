@@ -1,0 +1,282 @@
+body {
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Mitr', sans-serif;
+    font-family: 'Sarabun', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: blanchedalmond;
+    width: 100%;
+    height: 8%;
+    display: flex;
+}
+
+.fa-shopping-bag {
+    line-height: 80px;
+    margin-right: 50px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.fa-shopping-bag:hover {
+    color: grey;
+}
+
+.text {
+    width: 100%;
+}
+
+.text h1 {
+    margin-left: 50px;
+}
+
+.slideshow {
+    max-width: 100%;
+    height: 60%;
+    position: relative;
+}
+
+.sildes {
+    width: 100%;
+}
+
+.pic {
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+
+.button {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+}
+
+.buttonleft {
+    float: left;
+    font-size: 50px;
+    margin-left: 50px;
+    color: white;
+    cursor: pointer;
+}
+
+.buttonleft:hover {
+    color: #ffffff63;
+}
+
+.buttonright {
+    float: right;
+    font-size: 50px;
+    margin-right: 50px;
+    color: white;
+    cursor: pointer;
+}
+
+.buttonright:hover {
+    color: #ffffff63;
+}
+
+.middle {
+    padding: 15;
+    border-radius: 80%;
+    display: inline-block;
+    margin: 10px;
+    transform: scale(0.5);
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    background-color: transparent;
+}
+
+.middle:hover {
+    background-color: #ffffff;
+}
+
+.menubar ul {
+    list-style: none;
+    background: orange;
+    padding: 0;
+    /* margin: 50; */
+    text-align: center;
+}
+
+
+.menubar li {
+    display: inline-flex;
+}
+
+.menubar a {
+    text-decoration: none;
+    color: #ffffff;
+    width: 10vw;
+    display: block;
+    padding: 10px 20px;
+    font-size: 2vw;
+    text-align: center;
+}
+
+.menubar a:hover {
+    background: grey;
+}
+
+.menu-bar {
+    display: inline-block;
+
+}
+
+.container {
+    max-width: 1500px;
+    margin: auto;
+    width: 100%;
+}
+
+/*shopping content*/
+.shop-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    gap: 1.5rem;
+    z-index: 1;
+}
+
+
+.product-box {
+    position: relative;
+    padding: 20px;
+}
+
+.product-box:hover {
+    /* padding: 10px;
+    border: 1px solid var(--text-color);
+    transition: 0.4s; */
+    background-color: #cccc;
+}
+
+.product-img {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 0.5rem;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+
+.add-cart {
+    position: absolute;
+    bottom: 0;
+    right: 10;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+
+    padding: 10px;
+    cursor: pointer;
+}
+
+.add-cart:hover {
+    background: hsl(249, 32%, 17%);
+}
+
+/*end shopping content*/
+
+/*cart*/
+.cart {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 500px;
+    min-height: 100vh;
+    padding: 20px;
+    background: #fff;
+    box-shadow: -2px 0 4px hsl(0 4% 15%/10%);
+    transition: 0.3s;
+    z-index: 1000;
+    /* overflow-x: hidden; */
+    overflow-y: auto;
+}
+
+.units {
+    position: relative;
+    display: flex;
+}
+
+.minus,
+.plus {
+    margin: 0.5vw;
+    margin-left: 0vw;
+    background-color: antiquewhite;
+    border-radius: 50%;
+    width: 1.5vw;
+    height: 1.5vw;
+    text-align: center;
+}
+
+.minus:hover,
+.plus:hover{
+    background-color: rgb(230, 164, 77);
+}
+
+.number,
+.bxs-trash-alt {
+    margin: 0.5vw;
+
+}
+
+.item {
+    position: absolute;
+    width: auto;
+}
+
+
+.cart.active {
+    right: 0;
+}
+
+#close-cart {
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+}
+
+#close-cart:hover {
+    color: red;
+}
+
+
+
+
+@media screen and (max-width: 620px) {
+    .menubar {
+        position: fixed;
+        bottom: 0;
+        z-index: 1;
+        width: 100%;
+    }
+
+    .slideshow {
+        max-width: 100%;
+        height: 40%;
+        position: relative;
+    }
+
+    .container {
+        max-width: 1500px;
+        margin: auto;
+        width: 100%;
+        margin-bottom: 6vh;
+    }
+
+
+}

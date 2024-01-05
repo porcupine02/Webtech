@@ -1,0 +1,74 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab5/3</title>
+    <style>
+        * {
+            margin-left: 5px;
+        }
+
+        #country {
+            font-size: 18;
+        }
+
+        td {
+            width: 300px;
+            height: 180px;
+        }
+
+        img {
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="asd"></p>
+    <table id="country"></table>
+    <script>
+        let requestURL = 'countries.json';
+        let request = new XMLHttpRequest();
+        request.onreadystatechange = function () {
+            if (request.readyState == 4 && request.status == 200) {
+                ExtractData(JSON.parse(request.responseText));
+                // reuest.responseText have all text of JSON file
+                // ExtractData() is function of obj string "can use"
+            }
+        };
+        request.open("GET", requestURL, true);
+        request.send();
+
+
+        function ExtractData(data) {
+            newcountry = '';
+            for (info of data) {
+                newcountry += "<tr>";
+                newcountry += "<td>";
+                newcountry += "Name : <b>" + info.name + "</b> <br>";
+                newcountry += "Capital : " + info.capital + "<br>";
+                newcountry += "Population : " + info.population + "<br>";
+                newcountry += "Region : " + info.region + "<br>";
+                newcountry += "Location : " + info.latlng + "<br>";
+                newcountry += "Borders : ";
+                for (border of info.borders) {
+                    newcountry += border + " ";
+                }
+                newcountry += "</td>";
+                newcountry += "<td>";
+                newcountry += "<img src='" + info.flag + "'>";
+                newcountry += "</td>";
+                newcountry += "</tr>";
+            }
+            document.getElementById("country").innerHTML = newcountry;
+
+
+        }
+    </script>
+
+
+</body>
+
+</html>

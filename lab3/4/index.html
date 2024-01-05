@@ -1,0 +1,85 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        #math {
+            width: 10%;
+        }
+
+        #thai {
+            width: 10%;
+        }
+
+        #english {
+            width: 10%;
+        }
+
+        #science {
+            width: 10%;
+        }
+
+        #social {
+            width: 10%;
+        }
+
+        .box {
+            margin: 5;
+            padding: 10;
+            background-color: bisque;
+            font-family: 'Prompt', sans-serif;
+        }
+        button {
+            position: absolute;
+            width: 100px;
+            left: 50%;
+            margin-left: -50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="math" width="100px">
+        Math
+    </div>
+    <div class="box" id="thai">
+        Thai
+    </div>
+    <div class="box" id="english">
+        English
+    </div>
+    <div class="box" id="science">
+        Science
+    </div>
+    <div class="box" id="social">
+        Social
+    </div>
+
+    <button onclick="showgraph()">SHOW</button>
+
+
+    <script>
+        function showgraph() {
+            document.getElementById('math').style.width = "45%";
+            document.getElementById('thai').style.width = "50%";
+            document.getElementById('english').style.width = "30%";
+            document.getElementById('science').style.width = "70%";
+            document.getElementById('social').style.width = "60%";
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>

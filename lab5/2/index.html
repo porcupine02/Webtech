@@ -1,0 +1,58 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab5/2</title>
+</head>
+
+<body>
+    <script>
+        let requestURL = 'questionAnswerData.json';
+        let request = new XMLHttpRequest();
+        request.onreadystatechange = function () {
+            if (request.readyState == 4 && request.status == 200) {
+                ExtractData(JSON.parse(request.responseText));
+                // reuest.responseText have all text of JSON file
+                // ExtractData() is function of obj string "can use"
+            }
+        };
+        request.open("GET", requestURL, true);
+        request.send();
+
+
+        function ExtractData(data) {
+            let count = 1;
+            document.write("<h1> Quiz 1 </h1>");
+            for (let num of data) {
+                document.write(count + " ) " + num.question + "<br>");
+                let ans = num.answers;
+                if (ans.correct == "a"){
+                    document.write("<input type='radio' checked>" + ans.a + "<br>");
+                    document.write("<input type='radio'>" + ans.b + "<br>");
+                    document.write("<input type='radio'>" + ans.c + "<br>");
+                }
+                else if (ans.correct == "b"){
+                    document.write("<input type='radio'>" + ans.a + "<br>");
+                    document.write("<input type='radio' checked>" + ans.b + "<br>");
+                    document.write("<input type='radio'>" + ans.c + "<br>");
+
+                }
+                else if (ans.correct == "c"){
+                    document.write("<input type='radio'>" + ans.a + "<br>");
+                    document.write("<input type='radio'>" + ans.b + "<br>");
+                    document.write("<input type='radio' checked>" + ans.c + "<br>");
+
+                }
+                count++;
+                document.write("<br>")
+            }
+
+        }
+    </script>
+
+
+</body>
+
+</html>

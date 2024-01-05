@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap" rel="stylesheet">
+  <title>Document</title>
+
+
+<style>
+  body {
+    font-family: 'Signika Negative', sans-serif;
+    width: 100%;
+    padding-top: 30px;
+    background-color: #d2c8bc;
+  }
+
+  .row {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(75, 66, 55);
+  }
+
+  .col {
+    width: 200px;
+    height: 200px;
+    padding: 80px;
+    border: 2px solid rgb(122, 106, 85);
+    font-size: 50px;
+    color: aliceblue;
+  }
+
+  .col:active {
+    background-color: rgb(0, 0, 0);
+
+  }
+
+</style>
+</head>
+<body>
+  <div class="container text-center">
+    <h1>Tic Tac Toe</h1>
+    <h3 id="turn">Turn: </h3>
+    <div class="row row-cols-3">
+      <div class="col" id="one" onclick="playGame(1)"></div>
+      <div class="col" id="two" onclick="playGame(2)"></div>
+      <div class="col" id="three" onclick="playGame(3)"></div>
+      <div class="col" id="four" onclick="playGame(4)"></div>
+      <div class="col" id="five" onclick="playGame(5)"></div>
+      <div class="col" id="six" onclick="playGame(6)"></div>
+      <div class="col" id="seven" onclick="playGame(7)"></div>
+      <div class="col" id="eight" onclick="playGame(8)"></div>
+      <div class="col" id="nine" onclick="playGame(9)"></div>
+    </div>
+  </div>
+</body>
+
+<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+  </script>
+<script>
+  turn.innerText = "Turn: O"
+  let gameClick = 0
+  function playGame(getClick = 1) {
+    let choose = document.querySelectorAll(".col")[getClick - 1]
+    if (choose.innerText == "X" || choose.innerText == "O") {
+      return
+    }
+    gameClick++
+    if (gameClick % 2 == 0) {
+      choose.innerText = "X"
+      turn.innerText = "Turn: O"
+    }
+    else {
+      choose.innerText = "O"
+      turn.innerText = "Turn: X"
+    }
+  }
+</script>
+
+</html>

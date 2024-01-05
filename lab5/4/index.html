@@ -1,0 +1,74 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab5/4</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        * {
+            overflow: auto;
+            overflow-x: hidden;
+        }
+        .card-deck {
+            position: relative;
+            display: flex;
+            padding: 10px;
+
+        }
+        p {
+            font-size: small;
+        }
+        .card {
+            padding: 5px;
+            margin-left: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="card-deck" id="nung">
+    </div>
+    <!-- <button type="button" class="btn btn-primary">เช็ครอบภาพยนตร์</button> -->
+    <script>
+
+
+        let requestURL = 'movies.json';
+        let request = new XMLHttpRequest();
+        request.onreadystatechange = function () {
+            if (request.readyState == 4 && request.status == 200) {
+                ExtractData(JSON.parse(request.responseText));
+                // reuest.responseText have all text of JSON file
+                // ExtractData() is function of obj string "can use"
+            }
+        };
+        request.open("GET", requestURL, true);
+        request.send();
+
+        function ExtractData(data) {
+            let but = "<button type='button' class='btn btn-primary'>เช็ครอบภาพยนตร์</button>";
+            let card = "<div class='card text-center'>";
+            let txt = '';
+            // document.writeln(data.movies.showing[0].title_th);
+            let info = data.movies.showing;
+            for (let show of info) {
+                txt += card;
+                txt += "<img src='" + show.poster + "'><br>";
+                txt += show.title_th + "<br>";
+                txt += "<p>Release date : " + show.releasedate + "</p>";
+                txt += but;
+                txt += "</div>";
+            }
+            document.getElementById("nung").innerHTML = txt;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

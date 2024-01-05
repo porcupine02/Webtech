@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<input type="checkbox" name="folk" id="folk" value = "folk"/>folk <br>
+<input type="checkbox" name="fronk" id="fronk" value = "fronk"/> fronk <br>
+<button onclick="folk()">folk</button>
+
+<input type="checkbox" name="group2[]" />
+<input type="checkbox" name="group2[]" />
+<input type="checkbox" name="group2[]" />
+
+<input type="checkbox" name="group3[]" />
+<input type="checkbox" name="group3[]" />
+<input type="checkbox" name="group3[]" />
+
+
+
+<script>
+    let folks = document.querySelector('#folk');
+    let fronk = document.querySelector('#fronk');
+    
+    function folk(){
+        if(folks.checked){
+            console.log("folk");
+        }
+        else{
+            console.log("fronk");
+        }
+    }
+
+
+</script>
+</body>
+</html>
